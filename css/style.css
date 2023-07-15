@@ -1,0 +1,123 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--Cream);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+:root{
+    --Dark: hsl(158, 36%, 37%) ;
+    --Cream: hsl(30, 38%, 92%);
+    --Very-dark-blue: hsl(212, 21%, 14%);
+    --Dark-grayish-blue: hsl(228, 12%, 48%);
+    --White: hsl(0, 0%, 100%);
+}
+p{
+    font-size: 14px;
+}
+.price{
+    font-family: 'Fraunces', serif;
+    font-weight: 700;
+}
+img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10px 0 0 10px;
+}
+.image{
+    width: 50%;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    background-color: var(--White);
+    max-width: 666px;
+    border-radius: 10px;
+}
+.container .text{
+    padding: 2rem;
+    width: 50%;
+}
+.text .product{
+    color: var(--Dark-grayish-blue);
+    letter-spacing: 3px;
+    margin-bottom: 1.75rem;
+}
+.text .info{
+    font-family: 'Fraunces', serif;
+    line-height: 35px;
+    margin-bottom: 1.75rem;
+}
+.text .dis{
+    margin-bottom: 1.75rem;
+    font-size: 14px;
+    color: var(--Dark-grayish-blue);
+    line-height: 22px;
+}
+.text .price{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.75rem;
+}
+.text .pricenew{
+    color: var(--Dark);
+}
+.text .price p{
+    color: var(--Dark-grayish-blue);
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: line-through;
+}
+.text button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--Dark);
+    color: white;
+    width: 100%;
+    padding: 1rem 2rem;
+    gap: 1rem;
+    border-radius: 10px;
+    border: transparent;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.text button:hover{
+    background-color: hsl(159, 18%, 22%);;
+}
+/* small */
+@media (max-width:376px) {
+    .container{
+        width: 350px;
+        flex-direction: column;
+        gap: 20px;
+        margin-top: 1rem ;
+        margin-bottom: 1rem;
+    }
+    .image{
+        width: 100%;
+        height: 40%;
+    }
+    img{
+        border-radius: 10px 10px 0 0;
+        content: url(/images/image-product-mobile.jpg);
+    }
+    .container .text{
+        width: 100%;
+    }
+}
+/* large */
+@media (min-width:1440px) {
+.container {
+        width: 1400px;
+    }
+}
